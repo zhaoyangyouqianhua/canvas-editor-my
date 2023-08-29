@@ -825,6 +825,9 @@ export function createDomFromElementList(
           checkbox.setAttribute('checked', 'true')
         }
         clipboardDom.append(checkbox)
+      }else if (element.type === ElementType.PAGE_BREAK) {
+        const pageBreak =  document.createComment('page_break')
+        clipboardDom.append(pageBreak)
       } else if (element.type === ElementType.TAB) {
         const tab = document.createElement('span')
         tab.innerHTML = `${NON_BREAKING_SPACE}${NON_BREAKING_SPACE}`
