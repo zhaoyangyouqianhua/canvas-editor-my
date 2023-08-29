@@ -117,33 +117,34 @@ export class CursorAgent {
             this.draw.insertElementList(pasteElementList)
           })
         }
-      } else if (item.kind === 'file') {
-        if (item.type.includes('image')) {
-          const file = item.getAsFile()
-          if (file) {
-            const fileReader = new FileReader()
-            fileReader.readAsDataURL(file)
-            fileReader.onload = () => {
-              // 计算宽高
-              const image = new Image()
-              const value = fileReader.result as string
-              image.src = value
-              image.onload = () => {
-                const imageElement: IElement = {
-                  value,
-                  type: ElementType.IMAGE,
-                  width: image.width,
-                  height: image.height
-                }
-                if (~startIndex) {
-                  formatElementContext(elementList, [imageElement], startIndex)
-                }
-                this.draw.insertElementList([imageElement])
-              }
-            }
-          }
-        }
-      }
+      } 
+      // else if (item.kind === 'file') {
+      //   if (item.type.includes('image')) {
+      //     const file = item.getAsFile()
+      //     if (file) {
+      //       const fileReader = new FileReader()
+      //       fileReader.readAsDataURL(file)
+      //       fileReader.onload = () => {
+      //         // 计算宽高
+      //         const image = new Image()
+      //         const value = fileReader.result as string
+      //         image.src = value
+      //         image.onload = () => {
+      //           const imageElement: IElement = {
+      //             value,
+      //             type: ElementType.IMAGE,
+      //             width: image.width,
+      //             height: image.height
+      //           }
+      //           if (~startIndex) {
+      //             formatElementContext(elementList, [imageElement], startIndex)
+      //           }
+      //           this.draw.insertElementList([imageElement])
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
     }
     evt.preventDefault()
   }
