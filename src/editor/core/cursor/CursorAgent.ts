@@ -1,8 +1,6 @@
 import { ZERO } from '../../dataset/constant/Common'
 import { EDITOR_PREFIX } from '../../dataset/constant/Editor'
-import { VIRTUAL_ELEMENT_TYPE } from '../../dataset/constant/Element'
-import { ElementType } from '../../dataset/enum/Element'
-import { IElement } from '../../interface/Element'
+import { VIRTUAL_ELEMENT_TYPE } from '../../dataset/constant/Element
 import { debounce } from '../../utils'
 import { formatElementContext, getElementListByHTML } from '../../utils/element'
 import { Draw } from '../draw/Draw'
