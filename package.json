@@ -1,6 +1,6 @@
 {
-  "name": "@hufe921/canvas-editor",
-  "author": "Hufe",
+  "name": "@zhaodan/canvas-editor",
+  "author": "zhaodan",
   "license": "MIT",
   "version": "0.9.46",
   "description": "rich text editor by canvas/svg",
