@@ -2,7 +2,7 @@
   "name": "zhaodan-canvas-editor",
   "author": "zhaodan",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "rich text editor by canvas/svg",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
